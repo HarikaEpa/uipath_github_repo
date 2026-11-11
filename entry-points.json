@@ -1,0 +1,47 @@
+{
+  "$schema": "https://cloud.uipath.com/draft/2024-12/entry-point",
+  "entryPoints": [
+    {
+      "filePath": "Main-ActionCenter.xaml",
+      "uniqueId": "729766fe-1c02-45dc-b71f-5a3845e48f25",
+      "type": "process",
+      "input": {
+        "type": "object",
+        "properties": {
+          "in_TargetFile": {
+            "type": "string",
+            "description": "The file path of the target document that is going to be processed."
+          },
+          "in_UseQueue": {
+            "type": "boolean",
+            "description": "Variable that checks if the Document Understanding Process is using Orchestrator Queues or not.",
+            "x-default-expression": "True",
+            "default": true
+          }
+        },
+        "required": []
+      }
+    },
+    {
+      "filePath": "Main-Attended.xaml",
+      "uniqueId": "a899c6f7-222d-4f9e-9fd9-4953389341df",
+      "type": "process",
+      "input": {
+        "type": "object",
+        "properties": {
+          "in_TargetFile": {
+            "type": "string",
+            "description": "The file path of the target document that is going to be processed."
+          },
+          "in_UseQueue": {
+            "type": "boolean",
+            "description": "Variable that checks if the Document Understanding Process is using Orchestrator Queues or not.",
+            "x-default-expression": "False",
+            "default": false
+          }
+        },
+        "required": []
+      }
+    }
+  ]
+}
